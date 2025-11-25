@@ -21,6 +21,6 @@ spec:
         - name: MONGODB_URL
           value: "mongodb+srv://tapashbariflo_db_user:yuYD21YBP1bziUSx@cluster1.ynrsg2p.mongodb.net/fitnessData?retryWrites=true&w=majority&appName=Cluster1"
         - name: JWT
-          value: "Ts2id9v3+kwFSFZmMh/P64/n3R7Q3Avf8qmkykB+gQY="
+          value: "TUNpT3egqF4VKqu2N46l9Wu5KQD/TjG+klIyQEsUcZY="
         ports:
         - containerPort: 4001
