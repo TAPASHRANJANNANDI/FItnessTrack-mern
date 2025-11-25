@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const API = axios.create({
-  baseURL: "http://localhost:4001/api/",
+  baseURL: "http://a9321f5d0f9df42859e026f824ea4973-1239171527.ap-south-1.elb.amazonaws.com:4001/api/",
 });
 
 export const UserSignUp = async (data) => API.post("/user/signup", data);
