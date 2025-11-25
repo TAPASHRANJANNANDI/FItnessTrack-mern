@@ -4,7 +4,7 @@ WORKDIR /app
 
 COPY package*.json ./
 
-RUN npm install
+RUN npm install --production
 
 COPY . .
 
@@ -14,7 +14,7 @@ COPY . .
 RUN npm run build
 
 # Serve production build using a lightweight server
-# RUN npm install -g serve
+RUN npm install -g serve
 
 EXPOSE 3000
 # CMD ["serve", "-s", "dist", "-l", "3000"]

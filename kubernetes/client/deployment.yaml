@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: fitness-client-frontend-deployment
+  labels:
+    app: fitness-client-frontend
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: fitness-client-frontend
+  template:
+    metadata:
+      labels:
+        app: fitness-client-frontend
+    spec:
+      containers:
+      - name: fitness-client-frontend
+        image: tapashranjannandi/fitness-client-frontend:latest
+        ports:
+        - containerPort: 3000
