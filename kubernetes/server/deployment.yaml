@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: fitness-server-backend-deployment
+  labels:
+    app: fitness-server-backend
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: fitness-server-backend
+  template:
+    metadata:
+      labels:
+        app: fitness-server-backend
+    spec:
+      containers:
+      - name: fitness-server-backend
+        image: tapashranjannandi/fitness-server-backend:latest
+        env:
+        - name: MONGODB_URL
+          value: "mongodb+srv://tapashbariflo_db_user:yuYD21YBP1bziUSx@cluster1.ynrsg2p.mongodb.net/fitnessData?retryWrites=true&w=majority&appName=Cluster1"
+        - name: JWT
+          value: ""
+        ports:
+        - containerPort: 4001
